@@ -17,7 +17,7 @@ dojo.ready(function(){
 </head>
 <body>
 <h1 id="greeting">Dojo Version: </h1>
-<form action="/login.do" method="post">
+<form action="/login.do" method="POST">
 <p><font color = "red">${ErrorMessage}</font></p>
 Enter your name: <input type="text" name = "name"/>
 </br>
