@@ -27,6 +27,7 @@ Bootstrap Stylesheet CSS
 			<th>Description</th>
 			<th>Target Date</th>
 			<th>Completed?</th>
+			<th></th>
 		</tr>
 	</thead>
 	
@@ -40,6 +41,7 @@ Bootstrap Stylesheet CSS
 			<td>${todo.desc}</td>
 			<td>${todo.targetDate}</td>
 			<td>${todo.done}</td>
+			<td><a href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></a></td>
 		</tr>
 		  
 	</c:forEach>
