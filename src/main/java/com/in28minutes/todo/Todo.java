@@ -5,18 +5,18 @@ import java.util.Date;
 public class Todo {
 	private int id;
 	private String user;
-	private String Disc;
+	private String desc;
 	private Date targetDate;
 	private boolean isDone;
 	
 	
 	
-	public Todo(int id, String user, String disc, Date targetDate,
+	public Todo(int id, String user, String desc, Date targetDate,
 			boolean isDone) {
 		super();
 		this.id = id;
 		this.user = user;
-		Disc = disc;
+		this.desc = desc;
 		this.targetDate = targetDate;
 		this.isDone = isDone;
 	}
@@ -33,11 +33,11 @@ public class Todo {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public String getDisc() {
-		return Disc;
+	public String getDesc() {
+		return desc;
 	}
-	public void setDisc(String disc) {
-		Disc = disc;
+	public void setDesc(String disc) {
+		desc = disc;
 	}
 	public Date getTargetDate() {
 		return targetDate;
@@ -55,7 +55,7 @@ public class Todo {
 	public String toString() {
 		return String.format(
 				"ToString - Todo [id=%s, user=%s, Disc=%s, targetDate=%s, isDone=%s]", id,
-				user, Disc, targetDate, isDone);
+				user, desc, targetDate, isDone);
 	}
 	@Override
 	public int hashCode() {

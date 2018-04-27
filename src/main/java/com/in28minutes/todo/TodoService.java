@@ -36,8 +36,8 @@ public class TodoService {
 	}
 	
 	
-	public void addTodo(String name, String disc, Date targetDate, boolean isDone){
-		todos.add(new Todo(++todoCount,name,disc,targetDate,isDone));
+	public void addTodo(String name, String desc, Date targetDate, boolean isDone){
+		todos.add(new Todo(++todoCount,name,desc,targetDate,isDone));
 	}
 	
 	//Loop through the list and delete

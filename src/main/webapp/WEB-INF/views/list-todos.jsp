@@ -1,18 +1,62 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="ISO-8859-1"%>
+	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<!-- 
+Bootstrap Stylesheet CSS
+ -->
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	  rel="stylesheet">
+
 </head>
 <body>
-<h1>Todos List:</h1>
+<div class="container">
 
-<h1 id="todos">${todos} </h1>
+<table class="table table-striped">
+	<caption>${name} Todos List:</caption></br>
 
- 
-</form>
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Target Date</th>
+			<th>Completed?</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		
+	<!-- for each loop -->
+	<!--  for(todo:todos) -->
+	<c:forEach items="${todos}" var="todo">
+		</br>
+		<tr>
+			<td>${todo.desc}</td>
+			<td>${todo.targetDate}</td>
+			<td>${todo.done}</td>
+		</tr>
+		  
+	</c:forEach>
+	
+	</tbody>
+	
+	
 
+	
+</table>
+<div>
+<a class="btn btn-success" href="/add-todo">Add</a>
+</div>
+
+</div>
+<!-- jquery and bootstrap -->	
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
