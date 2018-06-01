@@ -31,7 +31,9 @@ public class LogoutController {
 				.getAuthentication();
 		if(auth != null){
 			new SecurityContextLogoutHandler().logout(request, response, auth);
+			request.getSession().invalidate();
 		}
+		
 		
 		return "redirect:/";
 	}

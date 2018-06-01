@@ -4,7 +4,7 @@
 <div class="container">
 
 <table class="table table-striped">
-	<caption>${name} Todos List:</caption></br>
+	<caption><spring:message code="todo.caption"/></caption></br>
 
 	<thead>
 		<tr>
